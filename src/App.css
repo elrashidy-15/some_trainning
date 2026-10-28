@@ -1,12 +1,39 @@
-body{
-    overflow: hidden;
+body {
+  overflow-x: hidden;
+  margin: 0px;
 }
-.App{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(3, 47, 128);
+.App {
+  padding: 10px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(3, 47, 128);
+}
+.center {
+  background-color: #6969e9;
+  padding: 20px;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+}
+@media (max-width: 768px) {
+  .center {
+    width: 80%;
+  }
+}
+@media (max-width: 480px) {
+  .center {
+    width: 90%;
+  }
+}
+@media (max-width: 320px) {
+  .center {
+    width: 100%;
+  }
 }

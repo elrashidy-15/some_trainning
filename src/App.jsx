@@ -1,15 +1,15 @@
 import './App.css'
 import Todo from './Todo'
+import Contact from './Contact'
+import UserCard from './UserCard'
 
 function App() {
   return (
     <div className="App">
-      <h1 style={{
-        fontSize: '4rem',
-        margin:"0",
-        padding:"0"
-      }}>Todo List : </h1>
+      <Contact />
       <Todo />
+      <UserCard name="John Doe" role={true} massage={5} online={true} />
+      <UserCard name='Mohamed' role={false} online={false} massage={2}/>
     </div>
   )
 }

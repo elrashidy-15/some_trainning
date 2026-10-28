@@ -17,7 +17,7 @@ export default function Todo() {
   }, [todos]);
 
   function handleAddTodo(e) {
-    if(!e.trim()) return; 
+    if (!e.trim()) return;
     setTodos([...todos, e]);
     setInputValue("");
   }
@@ -26,19 +26,18 @@ export default function Todo() {
   }
 
   return (
-    <div
-      style={{
-        backgroundColor: "#6969e9",
-        padding: "20px",
-        borderRadius: "10px",
-        margin: "auto",
-        marginTop: "50px",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
-        width:"50%"
-      }}
-    >
+    <div className="center">
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <h1
+          style={{
+            fontSize: "4rem",
+            margin: "0",
+            padding: "0",
+          }}
+        >
+          Todo List :{" "}
+        </h1>
+      </div>
       {/* Todo & Delete  */}
       {todos.map((todo, index) => (
         <div key={index}>
@@ -67,19 +66,6 @@ export default function Todo() {
       ))}
       {/* Add & input  */}
       <div style={{ display: "flex", justifyContent: "space-between" }}>
-        <button
-          style={{
-            padding: "10px",
-            width: "20%",
-            backgroundColor: "green",
-            color: "white",
-            border: "none",
-            borderRadius: "5px",
-          }}
-          onClick={() => handleAddTodo(inputValue)}
-        >
-          Add
-        </button>
         <input
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
@@ -92,6 +78,19 @@ export default function Todo() {
           type="text"
           placeholder="Add a todo"
         />
+        <button
+          style={{
+            padding: "10px",
+            width: "20%",
+            backgroundColor: "#4CAF50",
+            color: "white",
+            border: "none",
+            borderRadius: "5px",
+          }}
+          onClick={() => handleAddTodo(inputValue)}
+        >
+          Add
+        </button>
       </div>
     </div>
   );
